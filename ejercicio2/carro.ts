@@ -22,15 +22,15 @@ class Carro{
     persona: string;
 
 
-    constructor(nombre: string, modelo: string, motor: string, color: string, rueda1: string, rueda2: string, rueda3: string, rueda4: string, precio: number, disponible:boolean) {
+    constructor(nombre: string, modelo: string, motor: string, color: string, precio: number, disponible:boolean) {
         this.nombre = nombre
         this.modelo = modelo
         this.motor = motor
         this.color = color
-        this.rueda1 = rueda1
-        this.rueda2 = rueda2
-        this.rueda3 = rueda3
-        this.rueda4 = rueda4
+        this.rueda1 = 'blanco'
+        this.rueda2 = 'blanco'
+        this.rueda3 = 'blanco'
+        this.rueda4 = 'blanco'
         this.precio = precio
         this.disponible = disponible
     }
@@ -39,6 +39,7 @@ class Carro{
         console.log(`Nombre: ${this.nombre}  Modelo: ${this.modelo}  Motor: ${this.motor}`)
         console.log(`Color: ${this.color}`)
         console.log(`Precio: ${this.precio}`)
+        console.log(`Color de rueda1: ${this.rueda1}`)
     }
 
     stock() {
@@ -51,13 +52,17 @@ class Carro{
             console.log('') // Para dar espacio entre objetos en la consola
         }
     }
+
+    setRueda1(color: string){
+        this.rueda1 = color
+    }
 }
 
-let carro1 = new Carro('Toyota', 'XT234', 'GTX1050', 'Blanco',rueda,rueda,rueda,rueda,8000,true)
-let carro2 = new Carro('Nissan', 'HG540', 'HTM400', 'Negro',rueda,rueda,rueda,rueda,5000,false)
+let carro1 = new Carro('Toyota', 'XT234', 'GTX1050', 'Blanco',8000,true)
+let carro2 = new Carro('Nissan', 'HG540', 'HTM400', 'Negro',5000,false)
 
 carro1.descripcion()
 carro1.stock()
+carro1.setRueda1('negro')
 
-carro2.descripcion()
-carro2.stock();
+carro1.descripcion()
