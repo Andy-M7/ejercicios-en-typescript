@@ -1,17 +1,15 @@
-class Rueda{
+class Rueda {
     aro: string;
-    camara: string;
-    caucho: string;
-    constructor(aro: string, camara: string, caucho: string){
-        this.aro = aro
-        this.camara = camara
-        this.caucho = caucho
+    llanta: string;
+    constructor(){
+        this.aro = "Acero"
+        this.llanta = "llanta"
     }
-
     dato(){
-        console.log(`Aro: ${this.aro}, Camara: ${this.camara}, Caucho: ${this.caucho}`)
+        console.log(`Aro: ${this.aro}, Llanta: ${this.llanta}`)
     }   
-}
 
-set ruedas = new Rueda('Metal', '23 X 42', '3 pulgadas')
-ruedas.dato()
+    devolver(){
+        return this.aro
+    }
+}

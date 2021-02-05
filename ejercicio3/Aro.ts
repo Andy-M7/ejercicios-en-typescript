@@ -1,4 +1,4 @@
-class Aro{
+class Aro extends Rueda {
     material: String;
     diseno: String;
 
@@ -10,4 +10,4 @@ class Aro{
     dato(){
         console.log(`Material: ${this.material}, Diseño: ${this.diseno}`)
     }
-}
+} 
