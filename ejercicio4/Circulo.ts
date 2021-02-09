@@ -1,21 +1,21 @@
-class Circulo{
-    radio: Double;
+class Circulo {
+    radio: number;
     color: string;
 
-    constructor(){          //constructor sin parametros
-        
-    }
-
-    constructor(radio: Double){  // constructor con parametro Radio
+    constructor(radio?: number) {  // Constructor con parametro Radio
         this.radio = radio
+        this.color = 'White'      // Color por defecto
     }
 
-    getradio(){
-        console.log(``)
+    getRadio(): number {
+        return this.radio
     }
 
-    getcolor(){
-        console.log(``)
+    getArea(): number {
+        return 3.14 * this.radio * this.radio;  // Calculando Area
     }
 }
 
+// Creando objeto
+let redondo = new Circulo(2)
+console.log(redondo.getArea())
